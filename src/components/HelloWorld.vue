@@ -24,14 +24,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-facing-decorator';
+import { Component, Prop, Vue, toNative } from 'vue-facing-decorator';
 
 @Component
-export default class HelloWorld extends Vue {
+class HelloWorld extends Vue {
   @Prop
   msg!: string
   count = 0
 }
+
+export default toNative(HelloWorld)
 </script>
 
 <style scoped>
