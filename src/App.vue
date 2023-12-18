@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -13,6 +9,20 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-facing-decorator';
+import HelloWorld from './components/HelloWorld.vue';
+
+@Component({
+  components: {
+    HelloWorld,
+  }
+})
+export default class App extends Vue {
+
+}
+</script>
 
 <style scoped>
 .logo {
